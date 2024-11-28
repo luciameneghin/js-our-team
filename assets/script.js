@@ -36,3 +36,23 @@ const teamMembers = [
     img: "img/female3.png"
   }
 ];
+
+// for (const member of teamMembers) {
+//   console.log(member.email);
+// }
+let containerCard = document.querySelector('.container');
+
+const teamMembersCard = (member) => {
+  const { name, role, email, img } = member
+  return `<div class="card">
+    <img src="assets/img/${img}" alt='${name}' class="image" />
+    <div class="card-content">
+      <p>${name}</p>
+      <p>${role}</p>
+      <p>${email}</p>
+    </div>
+  </div>`
+}
+console.log(teamMembersCard(teamMembers));
+
+
