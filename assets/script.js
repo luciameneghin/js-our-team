@@ -40,7 +40,7 @@ const teamMembers = [
 // for (const member of teamMembers) {
 //   console.log(member.img);
 // }
-let containerCard = document.querySelector('.container');
+let containerCard = document.querySelector('.container-card');
 
 const teamMembersCard = (member) => {
   const { name, role, email, img } = member
@@ -65,3 +65,24 @@ function memberCards(membersArray) {
 
 }
 memberCards(teamMembers)
+
+
+// FORM
+
+const form = document.querySelector('.form')
+const nameForm = document.getElementById('name-form')
+const roleForm = document.getElementById('role-form')
+const emailForm = document.getElementById('email-form')
+
+const button = document.querySelector('.btn')
+
+button.addEventListener('click', (e) => {
+  e.preventDefault();
+  const newMember = '';
+  let newName = nameForm.value;
+  let newRole = roleForm.value;
+  let newEmail = emailForm.value;
+
+  teamMembers.push(newMember)
+  memberCards(teamMembers)
+})
