@@ -10,23 +10,26 @@ body {
 
 
 header {
+  max-width: 70%;
+  margin: 50px auto;
   text-align: center;
+  line-height: 30px;
   font-weight: 800;
 }
 
 .container {
-  background-color: rgba(0, 255, 255, 0.5);
   max-width: 85%;
-  margin: 0 auto;
+  margin: 50px auto;
   display: flex;
-  justify-content: space-between;
-
   flex-wrap: wrap;
 }
 
 .card {
-  width: calc(100% / 4);
+  width: calc(100% / 3.5);
+  border: 2px solid black;
   display: flex;
+  flex-wrap: wrap;
+  margin: 20px auto;
   justify-content: space-between;
   background-color: blueviolet;
 }
@@ -36,8 +39,9 @@ header {
 }
 
 .card-content p {
-  text-align: flex-start;
   line-height: 40px;
   padding-right: 20px;
+  align-items: center;
+  color: white;
   /* padding: 40px 0 20px 30px; */
 }

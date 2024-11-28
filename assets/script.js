@@ -38,16 +38,16 @@ const teamMembers = [
 ];
 
 // for (const member of teamMembers) {
-//   console.log(member.email);
+//   console.log(member.img);
 // }
 let containerCard = document.querySelector('.container');
 
 const teamMembersCard = (member) => {
   const { name, role, email, img } = member
   return `<div class="card">
-    <img src="assets/img/${img}" alt='${name}' class="image" />
+    <img src="assets/${img}" alt='#' class="image">
     <div class="card-content">
-      <p>${name}</p>
+      <h4>${name}</h4>
       <p>${role}</p>
       <p>${email}</p>
     </div>
@@ -56,3 +56,12 @@ const teamMembersCard = (member) => {
 console.log(teamMembersCard(teamMembers));
 
 
+function memberCards(membersArray) {
+  let cards = '';
+  for (let member of membersArray) {
+    cards += teamMembersCard(member)
+  }
+  return containerCard.innerHTML = cards
+
+}
+memberCards(teamMembers)
