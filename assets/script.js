@@ -67,22 +67,31 @@ function memberCards(membersArray) {
 memberCards(teamMembers)
 
 
+
 // FORM
 
 const form = document.querySelector('.form')
-const nameForm = document.getElementById('name-form')
-const roleForm = document.getElementById('role-form')
-const emailForm = document.getElementById('email-form')
 
 const button = document.querySelector('.btn')
 
 button.addEventListener('click', (e) => {
   e.preventDefault();
-  const newMember = '';
-  let newName = nameForm.value;
-  let newRole = roleForm.value;
-  let newEmail = emailForm.value;
+  const imageForm = document.getElementById('image-form').value
+  const nameForm = document.getElementById('name-form').value
+  const roleForm = document.getElementById('role-form').value
+  const emailForm = document.getElementById('email-form').value
+  document.getElementById('image-form').value = '';
+  document.getElementById('name-form').value = '';
+  document.getElementById('role-form').value = '';
+  document.getElementById('email-form').value = '';
 
+  const newMember = {
+    img: imageForm,
+    name: nameForm,
+    role: roleForm,
+    email: emailForm
+  };
   teamMembers.push(newMember)
   memberCards(teamMembers)
 })
+

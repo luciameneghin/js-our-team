@@ -40,15 +40,21 @@
     <h3>Compila il form per entrare a far parte del nostro team!</h3>
     <section class="container-form">
       <form action="#">
+        <label for="image-form">Immagine</label>
+        <input class="form-control" id="image-form" type="text" placeholder="carica qui la tua immagine"
+          aria-label="default input example">
+
         <label for="name-form">Nome</label>
         <input class="form-control" id="name-form" type="text" placeholder="scrivi qui il tuo nome"
-          aria-label="default input example">
+          aria-label="default input example" required>
+
         <label for="role-form">Ruolo</label>
         <input class="form-control" id="role-form" type="text"
-          placeholder="scrivi qui il tuo ruolo all'interno del team" aria-label="default input example">
+          placeholder="scrivi qui il tuo ruolo all'interno del team" aria-label="default input example" required>
+
         <label for="email-form">Email</label>
         <input class="form-control" id="email-form" type="text" placeholder="scrivi qui la tua email"
-          aria-label="default input example">
+          aria-label="default input example" required>
         <button type="button" class="btn btn-dark">Invia</button>
 
       </form>
